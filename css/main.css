@@ -3,9 +3,18 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-
+body{
+	background: #333;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+}
+.responseCard{
+	background: #fff;
+	color: #333;
+	margin: 3rem;
+}
 
 
 
