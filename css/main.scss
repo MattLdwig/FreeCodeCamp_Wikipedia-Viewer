@@ -1,0 +1,78 @@
+@mixin flexbox($value, $align){
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: flex;
+    flex-direction: $value;
+ 	-webkit-flex-direction: $value;
+ 	-ms-flex-direction: $value;
+    flex-direction: $value;
+    -webkit-box-pack: $align;
+    -webkit-justify-content: $align;
+    -ms-flex-pack: $align;
+    justify-content: $align;
+}
+$primary: #fff;
+
+html, body{
+	min-height: 100%;
+	@include flexbox(column, center);
+}
+body{
+	background: #333;
+}
+.wrapper{
+	@include flexbox(column, center);
+}
+.searchBox{
+	@include flexbox(row, center);
+	align-items: center;
+	font-size: 8rem;
+}
+.header{
+	font-size: 3rem;
+	margin-top: 25px;
+}
+.random{
+	color: $primary;
+	text-align: center;
+	margin-top: 25px;
+}
+.responses{
+	@include flexbox(column, center);
+}
+.responseCard{
+	background:$primary;
+	color: #333;
+	margin: 3rem;
+}
+#search{
+	background: none;
+	color:#fff;
+	border: none;
+	border-bottom: 1px solid $primary;
+}
+#search:focus{
+	outline: none;	
+}
+#search:focus::-webkit-input-placeholder {color: transparent}
+#search:focus::-moz-placeholder          {color: transparent}
+#search:focus:-moz-placeholder           {color: transparent}
+#search:focus:-ms-input-placeholder      {color: transparent}
+
+.fa{
+	color:#fff;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
