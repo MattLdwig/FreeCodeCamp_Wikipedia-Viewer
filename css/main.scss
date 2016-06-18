@@ -12,6 +12,12 @@
     -ms-flex-pack: $align;
     justify-content: $align;
 }
+@mixin labelAnimation(){
+	transform: translate3d(0,-90%,0);
+	font-size: 30%; 
+	opacity: .5;
+	transition: all .3s ease;
+}
 $primary: #fff;
 
 html, body{
@@ -25,9 +31,15 @@ body{
 	@include flexbox(column, center);
 }
 .searchBox{
-	@include flexbox(row, center);
-	align-items: center;
 	font-size: 8rem;
+	color:$primary;
+	display: flex;
+
+	label{
+		position: absolute;
+		float: right;
+	}
+	
 }
 .header{
 	font-size: 3rem;
@@ -50,11 +62,19 @@ body{
 	background: none;
 	color:#fff;
 	border: none;
-	border-bottom: 1px solid $primary;
 }
+
 #search:focus{
-	outline: none;	
+	outline: none;
+	border-bottom: 2px solid #fff;
+	+label{
+		@include labelAnimation();
+	}
+	}
+#search:valid + label{
+	@include labelAnimation();
 }
+
 #search:focus::-webkit-input-placeholder {color: transparent}
 #search:focus::-moz-placeholder          {color: transparent}
 #search:focus:-moz-placeholder           {color: transparent}
@@ -64,8 +84,6 @@ body{
 	color:#fff;
 	cursor: pointer;
 }
-
-
 
 
 
