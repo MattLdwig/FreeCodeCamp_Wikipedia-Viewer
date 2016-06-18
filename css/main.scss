@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans);
 @mixin flexbox($value, $align){
 	display: -ms-flexbox;
     display: -webkit-flex;
@@ -18,55 +19,69 @@
 	opacity: .5;
 	transition: all .3s ease;
 }
-$primary: #fff;
+//Colors and Fonts
+$fontPrimary: #333;
+$contrast: #E25D33;
+$fontTitle: 'Cardo', serif;
+$fontText:  'Josefin Sans', sans-serif;
 
 html, body{
 	min-height: 100%;
 	@include flexbox(column, center);
 }
 body{
-	background: #333;
+	background: #fafafa;
 }
 .wrapper{
 	@include flexbox(column, center);
 }
 .searchBox{
 	font-size: 8rem;
-	color:$primary;
+	color:$fontPrimary;
 	display: flex;
+	font-family: $fontTitle;
 
 	label{
 		position: absolute;
 		float: right;
-	}
-	
+	}	
 }
 .header{
 	font-size: 3rem;
 	margin-top: 25px;
 }
 .random{
-	color: $primary;
-	text-align: center;
+	color: $fontPrimary;
 	margin-top: 25px;
 }
 .responses{
 	@include flexbox(column, center);
 }
 .responseCard{
-	background:$primary;
-	color: #333;
-	margin: 3rem;
+	background:#fff;
+	color: $fontPrimary;
+	margin: 0;
+	padding: 0 3rem;
+	border-bottom: 1px solid #f1f1f1;
+	list-style: none;
+	font-family: $fontText;
+	h2{
+		color: $contrast;
+		font-family: $fontTitle;
+	}
+	p{
+		font-size: 1.7rem;
+	}
 }
 #search{
 	background: none;
-	color:#fff;
+	color:$fontPrimary;
 	border: none;
 }
 
 #search:focus{
 	outline: none;
-	border-bottom: 2px solid #fff;
+	border-bottom: 2px solid $fontPrimary;
 	+label{
 		@include labelAnimation();
 	}
@@ -81,7 +96,7 @@ body{
 #search:focus:-ms-input-placeholder      {color: transparent}
 
 .fa{
-	color:#fff;
+	color:$fontPrimary;
 	cursor: pointer;
 }
 

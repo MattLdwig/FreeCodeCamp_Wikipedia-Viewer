@@ -1,4 +1,5 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000323}}
+@import url(https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans);
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000328}}
 html, body {
   min-height: 100%;
   display: -ms-flexbox;
@@ -14,11 +15,11 @@ html, body {
   -ms-flex-pack: center;
   justify-content: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000332}}
 body {
-  background: #333; }
+  background: #fafafa; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000335}}
 .wrapper {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -33,28 +34,28 @@ body {
   -ms-flex-pack: center;
   justify-content: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000338}}
 .searchBox {
   font-size: 8rem;
-  color: #fff;
-  display: flex; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000338}}
+  color: #333;
+  display: flex;
+  font-family: "Cardo", serif; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000344}}
   .searchBox label {
     position: absolute;
     float: right; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000349}}
 .header {
   font-size: 3rem;
   margin-top: 25px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000353}}
 .random {
-  color: #fff;
-  text-align: center;
+  color: #333;
   margin-top: 25px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000357}}
 .responses {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -69,55 +70,66 @@ body {
   -ms-flex-pack: center;
   justify-content: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000360}}
 .responseCard {
   background: #fff;
   color: #333;
-  margin: 3rem; }
+  margin: 0;
+  padding: 0 3rem;
+  border-bottom: 1px solid #f1f1f1;
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000368}}
+  .responseCard h2 {
+    color: #E25D33;
+    font-family: "Cardo", serif; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000372}}
+  .responseCard p {
+    font-size: 1.7rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000376}}
 #search {
   background: none;
-  color: #fff;
+  color: #333;
   border: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000382}}
 #search:focus {
   outline: none;
-  border-bottom: 2px solid #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000370}}
+  border-bottom: 2px solid #333; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000385}}
   #search:focus + label {
     transform: translate3d(0, -90%, 0);
     font-size: 30%;
     opacity: .5;
     transition: all .3s ease; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000389}}
 #search:valid + label {
   transform: translate3d(0, -90%, 0);
   font-size: 30%;
   opacity: .5;
   transition: all .3s ease; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000393}}
 #search:focus::-webkit-input-placeholder {
   color: transparent; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000394}}
 #search:focus::-moz-placeholder {
   color: transparent; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000395}}
 #search:focus:-moz-placeholder {
   color: transparent; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000396}}
 #search:focus:-ms-input-placeholder {
   color: transparent; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/Wikipedia\/Wikipedia-Viewer-FCC\/css\/main\.scss}line{font-family:\0000398}}
 .fa {
-  color: #fff;
+  color: #333;
   cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */
