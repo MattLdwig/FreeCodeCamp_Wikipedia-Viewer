@@ -1,17 +1,20 @@
+//Google Fonts & Mixin
+
 @import url(https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans);
 @mixin flexbox($value, $align){
-	display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -webkit-box;
-    display: flex;
-    flex-direction: $value;
- 	-webkit-flex-direction: $value;
- 	-ms-flex-direction: $value;
-    flex-direction: $value;
-    -webkit-box-pack: $align;
-    -webkit-justify-content: $align;
-    -ms-flex-pack: $align;
-    justify-content: $align;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: -webkit-box;
+display: -moz-box;
+display: flex;
+flex-direction: $value;
+-webkit-flex-direction: $value;
+-ms-flex-direction: $value;
+flex-direction: $value;
+-webkit-box-pack: $align;
+-webkit-justify-content: $align;
+-ms-flex-pack: $align;
+justify-content: $align;
 }
 @mixin labelAnimation(){
 	transform: translate3d(0,-90%,0);
@@ -25,6 +28,7 @@ $contrast: #E25D33;
 $fontTitle: 'Cardo', serif;
 $fontText:  'Josefin Sans', sans-serif;
 
+//Style
 html, body{
 	min-height: 100%;
 	@include flexbox(column, center);
@@ -34,17 +38,31 @@ body{
 }
 .wrapper{
 	@include flexbox(column, center);
+	max-width:100%;
 }
+// General Search form
 .searchBox{
 	font-size: 8rem;
 	color:$fontPrimary;
 	display: flex;
 	font-family: $fontTitle;
-
-	label{
-		position: absolute;
-		float: right;
-	}	
+	.fix{
+		position: relative;
+		label{
+			position: absolute;
+			top: 0;
+			left: 15px;
+		}
+	}
+	@media (max-width: 1200px){
+		font-size: 5rem;
+	}
+	@media (max-width: 550px){
+		font-size: 4rem;
+	}
+	@media (max-width: 350px){
+		font-size: 3rem;
+	}
 }
 .header{
 	font-size: 3rem;
@@ -53,9 +71,32 @@ body{
 .random{
 	color: $fontPrimary;
 	margin-top: 25px;
+	a{
+		color: $contrast;
+	}
 }
+//Input & Label
+#search{
+	background: none;
+	color:$fontPrimary;
+	border: none;
+	max-width: 100%;
+}
+#search:focus{
+	outline: none;
+	border-bottom: 2px solid $fontPrimary;
+	+label{
+		@include labelAnimation();
+	}
+	}
+#search:valid + label{
+	@include labelAnimation();
+}
+
+//Wikipedia articles
 .responses{
 	@include flexbox(column, center);
+  margin-bottom: 20px;
 }
 .responseCard{
 	background:#fff;
@@ -73,39 +114,4 @@ body{
 		font-size: 1.7rem;
 	}
 }
-#search{
-	background: none;
-	color:$fontPrimary;
-	border: none;
-}
-
-#search:focus{
-	outline: none;
-	border-bottom: 2px solid $fontPrimary;
-	+label{
-		@include labelAnimation();
-	}
-	}
-#search:valid + label{
-	@include labelAnimation();
-}
-
-#search:focus::-webkit-input-placeholder {color: transparent}
-#search:focus::-moz-placeholder          {color: transparent}
-#search:focus:-moz-placeholder           {color: transparent}
-#search:focus:-ms-input-placeholder      {color: transparent}
-
-.fa{
-	color:$fontPrimary;
-	cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
 
