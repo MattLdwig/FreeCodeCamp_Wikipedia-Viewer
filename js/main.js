@@ -13,7 +13,7 @@ function wikiSearch(){
 				    $('.responses').append("<ul class='responseCard'><li><a href="+data[3][i]+"><h2>"+answers[i]+"</h2></a><p>"+data[2][i]+"</p></li></ul>");
 				    i++;
 			      }
-			   } else{
+			  } else{
 			      $('.responses').append("<p>The page "+searchTerm+" does not exist. You can <a href='https://en.wikipedia.org/wiki/Wikipedia:Articles_for_creation'>ask for it to be created</a>.");
 		    }
 		  }
